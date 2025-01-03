@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing Brand</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="My CSS/Style.css">
+    <!-- My Responsive CSS -->
+    <link rel="stylesheet" href="My CSS/Responsive.css">
+    <!-- bootstrap CSS Bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font-Awesome Bundle -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <style>
+/* Carousel Heading */
+.carousel-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Carousel Container */
+.multi-product-carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+/* Inner Wrapper */
+.multi-product-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Individual Slide (Contains 4 Cards) */
+.multi-product-carousel-slide {
+    display: flex;
+    flex: 0 0 100%; /* Ensures full slide width */
+    justify-content: space-between;
+}
+
+/* Individual Item */
+.multi-product-carousel-item {
+    flex: 0 0 23%; /* Each item takes exactly 23% of the slide width (4 items per slide with spacing) */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.multi-product-carousel-item img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.multi-product-carousel-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.multi-product-carousel-item span {
+    color: #0d5a36;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-white border-bottom py-2">
+        <div class="container d-flex align-items-center flex-wrap">
+            <!-- Menu Icon -->
+            <button class="btn btn-outline-dark d-flex align-items-center me-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <i class="fas fa-bars me-2"></i> MENU
+            </button>
+
+            <!-- Logo -->
+            <div class="text-center mx-auto">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/Armour Logo 3.jpg" alt="Logo" style="height: 40px;" class="me-2">
+                    <span class="fw-bold text-dark" style="font-size: 28px;">Armour Official</span>
+                </a>
+            </div>
+
+            < <!-- Add to Cart Section -->
+            <a href="cart.html" class="btn btn-outline-dark position-relative ms-auto">
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+                <span
+                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle p-2 rounded-circle">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="dropdown">
+                    <a href="winter wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Winter Wears</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="">Sweat Shirts</a>
+                        <a class="dropdown-item" href="">Sweaters</a>
+                        <a class="dropdown-item" href="">Mufflers</a>
+                        <a class="dropdown-item" href="">Hoodies</a>
+                        <a class="dropdown-item" href="">Jackets</a>
+                        <a class="dropdown-item" href="">Long Coats</a>
+                        <a class="dropdown-item" href="">Men's Shawls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="shirts.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Shirts</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Casual Shirts</a>
+                        <a class="dropdown-item" href="#">Sandos</a>
+                        <a class="dropdown-item" href="#">T-Shirts</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="bottom wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Bottom Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Trousers</a>
+                        <a class="dropdown-item" href="#">Shorts</a>
+                        <a class="dropdown-item" href="#">Jeans</a>
+                        <a class="dropdown-item" href="#">Cotton Pants</a>
+                        <a class="dropdown-item" href="#">Cargo Pants</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="traditional wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Traditional Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Shalwar Kameez</a>
+                        <a class="dropdown-item" href="#">Kurta Panjama</a>
+                        <a class="dropdown-item" href="#">Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="formal.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Formal
+                        Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Formal Shirts</a>
+                        <a class="dropdown-item" href="#">Formal Pants</a>
+                        <a class="dropdown-item" href="#">Suitings & Blazers</a>
+                        <a class="dropdown-item" href="#">Safari Suits</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="ceremonial.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Ceremonial Collection</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Fancy Suits</a>
+                        <a class="dropdown-item" href="#">Shairwani</a>
+                        <a class="dropdown-item" href="#">Prince Coats</a>
+                        <a class="dropdown-item" href="#">Designer Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="Accessories.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Accessories</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Undergarments</a>
+                        <a class="dropdown-item" href="#">Tie</a>
+                        <a class="dropdown-item" href="#">Cufflinks</a>
+                        <a class="dropdown-item" href="#">Pocket Squares</a>
+                        <a class="dropdown-item" href="#">Belts</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Images/corousel.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Exclusive Men's Wear</h5>
+                    <p>Style that defines you.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/corousel2.jpg" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Trendsetting Outfits</h5>
+                    <p>Embrace modern fashion.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/corousel3.jpg" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Luxury & Comfort</h5>
+                    <p>Experience unmatched quality.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Top Feature Start -->
+    <div class="container top-clothing-feature">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="clothing-feature-card">
+                    <div>
+                        <div class="clothing-feature-icon">📖</div>
+                        <h4>Premium Quality</h4>
+                        <span>Made from the finest materials, designed for excellence.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="clothing-feature-card">
+                    <div>
+                        <div class="clothing-feature-icon">💲</div>
+                        <h4>Affordable Prices</h4>
+                        <span>Elegance that fits your budget.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="clothing-feature-card">
+                    <div>
+                        <div class="clothing-feature-icon">🌟</div>
+                        <h4>Stylish Men's Wear</h4>
+                        <span>Fashion made easy for everyone, from amateurs to pros</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Feature End -->
+
+    <!-- Clothes Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-bold text-primary"></p>
+                <h1 class="display-5 mb-5 title" style="font-weight: bold; color: #853623;">Our Exclusive Clothing
+                    Styles</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Clothes Card 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="clothes-item rounded d-flex h-100">
+                        <div class="clothes-img rounded">
+                            <img class="img-fluid" src="./Images/polo.jpg" alt="Polo Shirt">
+                        </div>
+                        <div class="clothes-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                            </div>
+                            <h4 class="mb-3">Polo Shirt</h4>
+                            <p class="mb-4">Comfortable, breathable polo shirts perfect for everyday wear.</p>
+                            <a class="btn btn-sm" href="">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clothes Card 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="clothes-item rounded d-flex h-100">
+                        <div class="clothes-img rounded">
+                            <img class="img-fluid" src="./Images/formal.jpg" alt="Formal">
+                        </div>
+                        <div class="clothes-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                            </div>
+                            <h4 class="mb-3">Formal Wear</h4>
+                            <p class="mb-4">Stylish evening wear that combines elegance with comfort.</p>
+                            <a class="btn btn-sm" href="formal.html">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clothes Card 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="clothes-item rounded d-flex h-100">
+                        <div class="clothes-img rounded">
+                            <img class="img-fluid" src="./Images/groom.jpg" alt="Groom">
+                        </div>
+                        <div class="clothes-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                            </div>
+                            <h4 class="mb-3">Groom Wear</h4>
+                            <p class="mb-4">Elevate your big day with timeless groom's elegance.</p>
+                            <a class="btn btn-sm" href="ceremonial.html">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clothes Card 4 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="clothes-item rounded d-flex h-100">
+                        <div class="clothes-img rounded">
+                            <img class="img-fluid" src="./Images/denim.jpg" alt="Jeans">
+                        </div>
+                        <div class="clothes-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                            </div>
+                            <h4 class="mb-3">Denim Jeans</h4>
+                            <p class="mb-4">Durable and versatile jeans for casual and semi-formal outfits.</p>
+                            <a class="btn btn-sm" href="bottom wear.html">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clothes Card 5 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="clothes-item rounded d-flex h-100">
+                        <div class="clothes-img rounded">
+                            <img class="img-fluid" src="./Images/winter.jpg" alt="Winter">
+                        </div>
+                        <div class="clothes-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                            </div>
+                            <h4 class="mb-3">Winter Wear</h4>
+                            <p class="mb-4">Soft and warm men's clothes for chilly days and nights.</p>
+                            <a class="btn btn-sm" href="winter wear.html">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clothes Card 6 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="clothes-item rounded d-flex h-100">
+                        <div class="clothes-img rounded">
+                            <img class="img-fluid" src="./Images/traditional.jpg" alt="Traditional">
+                        </div>
+                        <div class="clothes-text rounded p-5">
+                            <div class="btn-square rounded-circle mx-auto mb-3">
+                            </div>
+                            <h4 class="mb-3">Traditional</h4>
+                            <p class="mb-4">Celebrate heritage with timeless traditional attire.</p>
+                            <a class="btn btn-sm" href="traditional wear.html">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Clothes End -->
+    <section class="stats-section py-5"
+        style="background-image: url('./Images/accessories.jpg'); background-size: cover; background-position: center;">
+        <div class="stats-overlay">
+            <div class="container text-center text-white">
+                <h1 class="stats-heading display-4 fw-bold">Acccessories</h1>
+                <p class="stats-text mt-3">
+                    Armour Accessories - Elevating Style Beyond Expectations! Our Essential Collection Curates a Range
+                    of
+                    Accessory Must-Haves Catering to Every Occasion.
+                </p>
+                <a href="Accessories.html" class="btn btn-primary stats-button mt-4 px-4 py-2">Shop Now</a>
+            </div>
+        </div>
+    </section>
+<!-- New Arrivals Section -->
+<!-- New Arrivals Section -->
+<section class="new-arrivals">
+    <br>
+    <h2 class="carousel-heading">New Arrivals</h2><br>
+    <div class="multi-product-carousel">
+        <div class="multi-product-carousel-inner">
+            <!-- Slide 1 -->
+            <div class="multi-product-carousel-slide">
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 1">
+                    <p>Product 1</p>
+                </div>
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 2">
+                    <p>Product 2</p>
+                </div>
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 3">
+                    <p>Product 3</p>
+                </div>
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 4">
+                    <p>Product 4</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="multi-product-carousel-slide">
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 5">
+                    <p>Product 5</p>
+                </div>
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 6">
+                    <p>Product 6</p>
+                </div>
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 7">
+                    <p>Product 7</p>
+                </div>
+                <div class="multi-product-carousel-item">
+                    <img src="Images/accessories.jpg" alt="Product 8">
+                    <p>Product 8</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br>
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4> Armour Official</h4>
+                <p>Welcome to Armour Official! We are menswear brand, designed entirely in-house, stand-alone
+                    Pakistan's No. 1 Shirt Brand. From timeless tailoring to premium formal shirts, we present a
+                    considered edit of quality, wearable clothes, and accessories bearing the name Armoured Offical.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="links">Our Links</h4>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./Product.html">Shop Now</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Our Office</h4>
+                <ul>
+                    <li><a href="#">📌 Bahria University Karachi Campus</a></li>
+                    <li><a href="#">📞 +012 345 67890</a></li>
+                    <li><a href="#">📩 bahria.edu.pk</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Cristiano/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Cristiano?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/cristiano/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/cristiano-ronaldo7?trk=ppro_cprof"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="copyright-area">
+        &copy; 2025 <strong>Armour Official</strong>. All rights reserved. | Designed by Team Dauntless
+    </div>
+    <!-- Copyright End -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const carouselInner = document.querySelector(".multi-product-carousel-inner");
+    const slides = document.querySelectorAll(".multi-product-carousel-slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slideWidth = carouselInner.offsetWidth; // Get the width of the carousel container
+        carouselInner.style.transform = `translateX(-${index * slideWidth}px)`; // Shift to the correct slide
+    }
+
+    function autoSlide() {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+            currentIndex = 0; // Loop back to the first slide
+        }
+        showSlide(currentIndex);
+    }
+
+    // Automatically switch slides every 7 seconds
+    setInterval(autoSlide, 4000);
+
+    // Initially show the first slide
+    showSlide(currentIndex);
+});
+</script>
+    <!-- My JS -->
+    <script src="My JS/Script.js"></script>
+    <script src="My JS/cart.js"></script>
+    <!-- bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

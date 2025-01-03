@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="My CSS/Style.css">
+    <!-- My Responsive CSS -->
+    <link rel="stylesheet" href="My CSS/Responsive.css">
+    <!-- bootstrap CSS Bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font-Awesome Bundle -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* Corousel Start */
+        .clothes-carousel {
+            position: relative;
+        }
+
+        .clothes-carousel-fade .clothes-carousel-item {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .clothes-carousel-image {
+            object-fit: cover;
+            height: 200px;
+            /* Adjust height for visual consistency */
+        }
+
+        .clothes-carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #fff;
+            /* background: rgba(0, 0, 0, 0.6); */
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        /* Corousel End */
+
+        /* About Us Section Styling */
+        .about-us-section {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us-section h2 {
+            font-size: 2rem;
+            color: #58410e;
+        }
+
+        .about-us-section h3 {
+            font-size: 1.5rem;
+            color: #63530e;
+        }
+
+        .about-us-section .text-muted {
+            font-size: 1rem;
+            color: #83631d !important;
+        }
+
+        .about-us-section .fs-2 {
+            font-size: 2rem;
+            color: #553e0d;
+        }
+
+        .about-us-section .fw-bold {
+            font-weight: 700;
+        }
+
+        .about-us-section .d-flex {
+            align-items: flex-start;
+        }
+
+        .about-us-section .d-flex i {
+            font-size: 2rem;
+            color: #705817;
+            margin-right: 15px;
+        }
+
+        /* Section Container Styling */
+        section {
+            padding: 40px 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Text Content Styling */
+        .text-content {
+            flex: 1 1 500px;
+        }
+
+        .text-content h2 {
+            color: #054e38;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .text-content p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Image Styling */
+        .image-content {
+            flex: 1 1 500px;
+            text-align: center;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-content img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Facts Section Start */
+        .facts-container {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            align-items: center;
+            min-height: 200px;
+        }
+
+        .facts-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .facts-container .container {
+            position: relative;
+            z-index: 2;
+            padding: 50px 15px;
+        }
+
+        .facts-container h1 {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .facts-container p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        /* Facts Section End */
+
+
+        /* Team Section Start */
+        .team-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .team-section h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #0c802f;
+        }
+
+        .team-section hr {
+            width: 60px;
+            height: 4px;
+            margin: 10px auto;
+            background-color: #0a9644;
+            border: none;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #0faa76;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #777;
+            margin: 0 0 10px;
+        }
+
+        .team-member .social-icons {
+            margin-top: 10px;
+        }
+
+        .team-member .social-icons a {
+            color: #08885d;
+            margin: 0 5px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .team-member .social-icons a:hover {
+            color: #08885d;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Team Section End */
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-white border-bottom py-2">
+        <div class="container d-flex align-items-center flex-wrap">
+            <!-- Menu Icon -->
+            <button class="btn btn-outline-dark d-flex align-items-center me-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <i class="fas fa-bars me-2"></i> MENU
+            </button>
+
+            <!-- Logo -->
+            <div class="text-center mx-auto">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/Armour Logo 3.jpg" alt="Logo" style="height: 40px;" class="me-2">
+                    <span class="fw-bold text-dark" style="font-size: 28px;">Armour Official</span>
+                </a>
+            </div>
+
+            <!-- Add to Cart Section -->
+            <a href="cart.html" class="btn btn-outline-dark position-relative ms-auto">
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+                <span
+                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle p-2 rounded-circle">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="dropdown">
+                    <a href="winter wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Winter Wears</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="">Sweat Shirts</a>
+                        <a class="dropdown-item" href="">Sweaters</a>
+                        <a class="dropdown-item" href="">Mufflers</a>
+                        <a class="dropdown-item" href="">Hoodies</a>
+                        <a class="dropdown-item" href="">Jackets</a>
+                        <a class="dropdown-item" href="">Long Coats</a>
+                        <a class="dropdown-item" href="">Men's Shawls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="shirts.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Shirts</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Casual Shirts</a>
+                        <a class="dropdown-item" href="#">Sandos</a>
+                        <a class="dropdown-item" href="#">T-Shirts</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="bottom wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Bottom Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Trousers</a>
+                        <a class="dropdown-item" href="#">Shorts</a>
+                        <a class="dropdown-item" href="#">Jeans</a>
+                        <a class="dropdown-item" href="#">Cotton Pants</a>
+                        <a class="dropdown-item" href="#">Cargo Pants</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="traditional wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Traditional Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Shalwar Kameez</a>
+                        <a class="dropdown-item" href="#">Kurta Panjama</a>
+                        <a class="dropdown-item" href="#">Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="formal.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Formal
+                        Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Formal Shirts</a>
+                        <a class="dropdown-item" href="#">Formal Pants</a>
+                        <a class="dropdown-item" href="#">Suitings & Blazers</a>
+                        <a class="dropdown-item" href="#">Safari Suits</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="ceremonial.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Ceremonial Collection</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Fancy Suits</a>
+                        <a class="dropdown-item" href="#">Shairwani</a>
+                        <a class="dropdown-item" href="#">Prince Coats</a>
+                        <a class="dropdown-item" href="#">Designer Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="Accessories.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Accessories</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Undergarments</a>
+                        <a class="dropdown-item" href="#">Tie</a>
+                        <a class="dropdown-item" href="#">Cufflinks</a>
+                        <a class="dropdown-item" href="#">Pocket Squares</a>
+                        <a class="dropdown-item" href="#">Belts</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Clothes Carousel Start -->
+    <div id="clothesCarousel" class="clothes-carousel slide clothes-carousel-fade" data-bs-ride="carousel">
+        <div class="clothes-carousel-inner">
+            <div class="clothes-carousel-item active">
+                <img src="./Images/background1.jpg" class="clothes-carousel-image w-100" alt="Clothes Display">
+                <div class="clothes-carousel-caption">
+                    <h2>About Us</h2>
+                    <p>All things you need to know</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Clothes Carousel End -->
+
+
+    <!-- Future Start -->
+    <section id="Future">
+        <div class="text-content">
+            <h2>Our Mission</h2>
+            <p>
+                <br>
+                Wardrobe to Create Impressions' is the driving force behind our business.
+                We aim to contribute and make a valuable addition to people's lives by providing a clothing line up of
+                the highest level of elegance.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="./Images/1111.jpg" alt="Our Mission" class="responsive-img">
+        </div>
+    </section>
+    <!-- Future End -->
+
+    <!-- Growth Start -->
+    <section id="Growth">
+        <div class="image-content">
+            <img src="./Images/3333.jpg" alt="Our History" class="responsive-img">
+        </div>
+        <div class="text-content">
+            <h2>Our History</h2>
+            <p>
+                <br>
+                Established in 1980, Armoured Officail has been in the fashion wear business for over 40 years now.
+                Armoured Officail is the oldest & absolute menswear brand of Pakistan.
+                Starting as a clothing brand for women and kids; Armoured Offical realized the need for a men's formal
+                wear brand and so in 1991, Armoured Offical launched its formal suiting line up for men.
+                Over the years, Armoured Offical kept growing and launching products as per the contemporary men's
+                fashion.
+                With every passing year the wardrobe for men kept improving due to the untiring efforts of stylist
+                designers and team.
+            </p>
+        </div>
+    </section>
+    <!-- Growth End -->
+
+    <!-- Future Start -->
+    <section id="Future">
+        <div class="text-content">
+            <h2>Our Network</h2>
+            <p>
+                <br>
+                Under the umbrella of Armoured Official we have a network of retail outlets throughout the country,
+                visit any Armoured Official “shirt and tie shop” and you will have access to all that you require for
+                your suiting needs;
+                each showroom is designed as an all-in-one sales point where a customer can walk in and buy complete
+                range of formal, smart casual and traditional attires.
+                For their ease, we offer a range of accessories such as ties, wallets, belts cufflinks and much more.
+                <br><br>Currently, we are operating in the following cities with more cities being added all the
+                time - Lahore, Islamabad, Rawalpindi, Multan, Sialkot, Faisalabad, Gujranwala, Gujarat, Lalamusa, Rahim
+                Yar Khan, Sargodha and Sahiwal
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="./Images/22222.jpg" alt="Our Network" class="responsive-img">
+        </div>
+    </section>
+    <!-- Future End -->
+
+    <!-- About Us 2 Start -->
+    <div class="about-us-section bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Content Section -->
+                <div class="col-md-8 mb-4 mb-md-0">
+                    <h1 class="display-4 text-success fw-bold">
+                        40+ <span class="h5 text-muted">Years of Experience</span>
+                    </h1>
+                    <p class="text-muted">
+                        With over 40 years of expertise in crafting premium menswear,
+                        Armoured Official brings unmatched craftsmanship and passion to every piece.
+                        Whether you're redefining your wardrobe or refining your signature style,
+                        our brand is your trusted source for timeless fashion, expert advice, and tailored solutions.
+                        With decades of dedication, we're here to help you step out with confidence, style, and ease.
+                    </p>
+                </div>
+
+                <!-- Features Section -->
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 align-items-start">
+                        <i class="fs-2 text-success me-3">🏆</i>
+                        <div>
+                            <h3 class="h6 fw-bold text-success">Award Winning</h3>
+                            <p class="text-muted mb-0">
+                                With a history of excellence and recognition in the clothing industry, we bring
+                                unparalleled expertise.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="fs-2 text-success me-3">👥</i>
+                        <div>
+                            <h3 class="h6 fw-bold text-success">Dedicated Team</h3>
+                            <p class="text-muted mb-0">
+                                We are committed to helping you achieve the wardrobe of your dreams,
+                                offering personalized style advice and expertly crafted menswear solutions.
+                                Elevate your look with designs that reflect your individuality and confidence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Us 2 End -->
+
+    <!-- Facts Start -->
+    <div class="facts-container py-5" style="background-image: url('./Images/background1.jpg');">
+        <div class="overlay">
+            <div class="container">
+                <div class="row text-center text-white">
+                    <div class="col-6 col-md-3">
+                        <h1 class="display-5 fw-bold counter" data-target="15000">0</h1>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h1 class="display-5 fw-bold counter" data-target="42000">0</h1>
+                        <p>Total Sales</p>
+                    </div>
+                    <div class="col-6 col-md-3 mt-4 mt-md-0">
+                        <h1 class="display-5 fw-bold counter" data-target="600">0</h1>
+                        <p>Dedicated Staff</p>
+                    </div>
+                    <div class="col-6 col-md-3 mt-4 mt-md-0">
+                        <h1 class="display-5 fw-bold counter" data-target="1100">0</h1>
+                        <p>Awards Achieved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+
+
+
+    <!-- Team Section Start --><br><br>
+    <h1 style=" text-align: center;">Meet Our Team</h1><br>
+    <div class="container"><br><br>
+        <div class="row justify-content-center">
+            <!-- Team Member 1 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="team-member text-center p-4">
+                    <img src="Images/dawood.jpg" alt="">
+                    <h3>Dawood Khurram</h3>
+                    <p>Cheif Executive Officer Armoured Officail</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="team-member text-center p-4">
+                    <img src="Images/affan2.jpg" alt="">
+                    <h3>M. Affan</h3>
+                    <p>Managing Director Armoured Official</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="team-member text-center p-4">
+                    <img src="Images/umar.jpg" alt="">
+                    <h3>Muhammad Umar</h3>
+                    <p>Assisstant Director Armoured Offical</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+        </div>
+    </div>
+    <!-- Team Section End -->
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4> Armour Official</h4>
+                <p>Welcome to Armour Official! We are menswear brand, designed entirely in-house, stand-alone
+                    Pakistan's No. 1 Shirt Brand. From timeless tailoring to premium formal shirts, we present a
+                    considered edit of quality, wearable clothes, and accessories bearing the name Armoured Offical.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="links">Our Links</h4>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./Product.html">Shop Now</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Our Office</h4>
+                <ul>
+                    <li><a href="#">📌 Bahria University Karachi Campus</a></li>
+                    <li><a href="#">📞 +012 345 67890</a></li>
+                    <li><a href="#">📩 bahria.edu.pk</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Cristiano/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Cristiano?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/cristiano/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/cristiano-ronaldo7?trk=ppro_cprof"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="copyright-area">
+        &copy; 2025 <strong>Armour Official</strong>. All rights reserved. | Designed by Team Dauntless
+    </div>
+
+
+    <script>
+        // Function to animate the counters
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target'); // Convert target to number
+                    const current = +counter.innerText; // Convert current value to number
+                    const increment = target / 200; // Adjust speed of animation
+
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(updateCounter, 10); // Call function every 10ms
+                    } else {
+                        counter.innerText = target; // Ensure it ends exactly at target
+                    }
+                };
+
+                updateCounter();
+            });
+        };
+
+        // Run animation when the page loads
+        window.addEventListener('load', animateCounters);
+    </script>
+    <!-- Copyright End -->
+    <script src="./My JS/Script.js"></script>
+    <script src="My JS/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

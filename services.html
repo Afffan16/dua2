@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing Brand</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="My CSS/Style.css">
+    <!-- My Responsive CSS -->
+    <link rel="stylesheet" href="My CSS/Responsive.css">
+    <!-- bootstrap CSS Bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font-Awesome Bundle -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* Corousel Start */
+        .clothes-carousel {
+            position: relative;
+        }
+
+        .clothes-carousel-fade .clothes-carousel-item {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .clothes-carousel-image {
+            object-fit: cover;
+            height: 200px;
+            /* Adjust height for visual consistency */
+        }
+
+        .clothes-carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #fff;
+            /* background: rgba(0, 0, 0, 0.6); */
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        /* Corousel End */
+        /* Section Container Styling */
+        section {
+            padding: 40px 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Text Content Styling */
+        .text-content {
+            flex: 1 1 500px;
+        }
+
+        .text-content h2 {
+            color: #054e38;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .text-content p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Image Styling */
+        .image-content {
+            flex: 1 1 500px;
+            text-align: center;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-content img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-white border-bottom py-2">
+        <div class="container d-flex align-items-center flex-wrap">
+            <!-- Menu Icon -->
+            <button class="btn btn-outline-dark d-flex align-items-center me-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <i class="fas fa-bars me-2"></i> MENU
+            </button>
+
+            <!-- Logo -->
+            <div class="text-center mx-auto">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/Armour Logo 3.jpg" alt="Logo" style="height: 40px;" class="me-2">
+                    <span class="fw-bold text-dark" style="font-size: 28px;">Armour Official</span>
+                </a>
+            </div>
+
+            <!-- Add to Cart Section -->
+            <a href="cart.html" class="btn btn-outline-dark position-relative ms-auto">
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+                <span
+                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle p-2 rounded-circle">0</span>
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="dropdown">
+                    <a href="winter wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Winter Wears</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="">Sweat Shirts</a>
+                        <a class="dropdown-item" href="">Sweaters</a>
+                        <a class="dropdown-item" href="">Mufflers</a>
+                        <a class="dropdown-item" href="">Hoodies</a>
+                        <a class="dropdown-item" href="">Jackets</a>
+                        <a class="dropdown-item" href="">Long Coats</a>
+                        <a class="dropdown-item" href="">Men's Shawls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="shirts.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Shirts</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Casual Shirts</a>
+                        <a class="dropdown-item" href="#">Sandos</a>
+                        <a class="dropdown-item" href="#">T-Shirts</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="bottom wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Bottom Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Trousers</a>
+                        <a class="dropdown-item" href="#">Shorts</a>
+                        <a class="dropdown-item" href="#">Jeans</a>
+                        <a class="dropdown-item" href="#">Cotton Pants</a>
+                        <a class="dropdown-item" href="#">Cargo Pants</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="traditional wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Traditional Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Shalwar Kameez</a>
+                        <a class="dropdown-item" href="#">Kurta Panjama</a>
+                        <a class="dropdown-item" href="#">Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="formal.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Formal
+                        Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Formal Shirts</a>
+                        <a class="dropdown-item" href="#">Formal Pants</a>
+                        <a class="dropdown-item" href="#">Suitings & Blazers</a>
+                        <a class="dropdown-item" href="#">Safari Suits</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="ceremonial.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Ceremonial Collection</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Fancy Suits</a>
+                        <a class="dropdown-item" href="#">Shairwani</a>
+                        <a class="dropdown-item" href="#">Prince Coats</a>
+                        <a class="dropdown-item" href="#">Designer Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="Accessories.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Accessories</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Undergarments</a>
+                        <a class="dropdown-item" href="#">Tie</a>
+                        <a class="dropdown-item" href="#">Cufflinks</a>
+                        <a class="dropdown-item" href="#">Pocket Squares</a>
+                        <a class="dropdown-item" href="#">Belts</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Carousel Start -->
+    <div id="clothesCarousel" class="clothes-carousel slide clothes-carousel-fade" data-bs-ride="carousel">
+        <div class="clothes-carousel-inner">
+            <div class="clothes-carousel-item active">
+                <img src="./Images/services.png" class="clothes-carousel-image w-100" alt="Clothes Display">
+                <div class="clothes-carousel-caption">
+                    <h1>Services</h1>
+                    <p>Explore our premium services, from custom clothing to styling and flexible payment options,
+                        designed to elevate your fashion experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Future Start -->
+    <section id="Future">
+        <div class="text-content">
+            <h2>Customize Clothes</h2>
+            <p>
+                <br>
+                Create your signature style with our custom clothing service.
+                Choose from premium fabrics, tailored fits, and personalized details to design outfits that reflect your
+                personality.
+                Perfectly crafted just for you, because no one does you better than you
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="./Images/customize.jpg" alt="Our Mission" class="responsive-img">
+        </div>
+    </section>
+    <!-- Future End -->
+
+    <!-- Growth Start -->
+    <section id="Growth">
+        <div class="image-content">
+            <img src="./Images/rental.jpg" alt="Our History" class="responsive-img">
+        </div>
+        <div class="text-content">
+            <h2>Rental Services</h2>
+            <p>
+                <br>
+                Experience the luxury of high-end fashion without the commitment.
+                Our rental services offer a wide range of stylish suits and tuxedos,
+                perfect for making a statement at any event.
+                Look your best, hassle-free.
+            </p>
+        </div>
+    </section>
+    <!-- Growth End -->
+
+    <!-- Future Start -->
+    <section id="Future">
+        <div class="text-content">
+            <h2>Accessories</h2>
+            <p>
+                <br>
+                Elevate your outfit with our thoughtfully curated collection of accessories designed to complement every
+                look.
+                From sleek ties and classic belts to refined cufflinks, pocket squares, and statement watches, we have
+                everything you need to add a touch of sophistication.
+                Each piece is crafted with attention to detail, ensuring quality and style.
+                Whether you're dressing for a formal event or adding flair to everyday wear, our accessories are the
+                perfect finishing touch to express your personality with confidence.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="./Images/accessories.jpg" alt="Our Network" class="responsive-img">
+        </div>
+    </section>
+    <!-- Future End -->
+    <!-- Growth Start -->
+    <section id="Growth">
+        <div class="image-content">
+            <img src="./Images/cod.jpg" alt="Our History" class="responsive-img">
+        </div>
+        <div class="text-content">
+            <h2>Cash On Delievery</h2>
+            <p>
+                <br>
+                Shop with ease and convenience using our Cash on Delivery option.
+                Pay only when your order arrives at your doorstep, ensuring a hassle-free and secure shopping
+                experience.
+                Style meets simplicity with a payment method you can trust.
+            </p>
+        </div>
+    </section>
+    <!-- Growth End -->
+
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4> Armour Official</h4>
+                <p>Welcome to Armour Official! We are menswear brand, designed entirely in-house, stand-alone
+                    Pakistan's No. 1 Shirt Brand. From timeless tailoring to premium formal shirts, we present a
+                    considered edit of quality, wearable clothes, and accessories bearing the name Armoured Offical.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="links">Our Links</h4>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./Product.html">Shop Now</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Our Office</h4>
+                <ul>
+                    <li><a href="#">📌 Bahria University Karachi Campus</a></li>
+                    <li><a href="#">📞 +012 345 67890</a></li>
+                    <li><a href="#">📩 bahria.edu.pk</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Cristiano/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Cristiano?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/cristiano/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/cristiano-ronaldo7?trk=ppro_cprof"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="copyright-area">
+        &copy; 2025 <strong>Armour Official</strong>. All rights reserved. | Designed by Team Dauntless
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- My JS -->
+    <script src="My JS/Script.js"></script>
+    <script src="My JS/cart.js"></script>
+    <!-- bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

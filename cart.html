@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing Brand</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="My CSS/Style.css">
+    <!-- My Responsive CSS -->
+    <link rel="stylesheet" href="My CSS/Responsive.css">
+    <!-- bootstrap CSS Bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font-Awesome Bundle -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        /* Cart Container */
+        .cart-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cart Items */
+        .cart-items {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .cart-items h2 {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fafafa;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item img {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .cart-item h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .cart-item .price {
+            margin-left: auto;
+            font-weight: bold;
+        }
+
+        /* Cart Summary */
+        .cart-summary {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-summary h3 {
+            margin-top: 0;
+        }
+
+        .cart-summary p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Order Form */
+        .order-form {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-form h3 {
+            margin-top: 0;
+        }
+
+        .order-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .order-form input,
+        .order-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .order-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0d5a36;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background-color: #237041;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-white border-bottom py-2">
+        <div class="container d-flex align-items-center flex-wrap">
+            <!-- Menu Icon -->
+            <button class="btn btn-outline-dark d-flex align-items-center me-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <i class="fas fa-bars me-2"></i> MENU
+            </button>
+
+            <!-- Logo -->
+            <div class="text-center mx-auto">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/Armour Logo 3.jpg" alt="Logo" style="height: 40px;" class="me-2">
+                    <span class="fw-bold text-dark" style="font-size: 28px;">Armour Official</span>
+                </a>
+            </div>
+
+            <!-- Add to Cart Section -->
+            <a href="cart.html" class="btn btn-outline-dark position-relative ms-auto">
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+                <span
+                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle p-2 rounded-circle">0</span>
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="dropdown">
+                    <a href="winter wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Winter Wears</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="">Sweat Shirts</a>
+                        <a class="dropdown-item" href="">Sweaters</a>
+                        <a class="dropdown-item" href="">Mufflers</a>
+                        <a class="dropdown-item" href="">Hoodies</a>
+                        <a class="dropdown-item" href="">Jackets</a>
+                        <a class="dropdown-item" href="">Long Coats</a>
+                        <a class="dropdown-item" href="">Men's Shawls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="shirts.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Shirts</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Casual Shirts</a>
+                        <a class="dropdown-item" href="#">Sandos</a>
+                        <a class="dropdown-item" href="#">T-Shirts</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="bottom wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Bottom Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Trousers</a>
+                        <a class="dropdown-item" href="#">Shorts</a>
+                        <a class="dropdown-item" href="#">Jeans</a>
+                        <a class="dropdown-item" href="#">Cotton Pants</a>
+                        <a class="dropdown-item" href="#">Cargo Pants</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="traditional wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Traditional Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Shalwar Kameez</a>
+                        <a class="dropdown-item" href="#">Kurta Panjama</a>
+                        <a class="dropdown-item" href="#">Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="formal.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Formal
+                        Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Formal Shirts</a>
+                        <a class="dropdown-item" href="#">Formal Pants</a>
+                        <a class="dropdown-item" href="#">Suitings & Blazers</a>
+                        <a class="dropdown-item" href="#">Safari Suits</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="ceremonial.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Ceremonial
+                        Collection</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Fancy Suits</a>
+                        <a class="dropdown-item" href="#">Shairwani</a>
+                        <a class="dropdown-item" href="#">Prince Coats</a>
+                        <a class="dropdown-item" href="#">Designer Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="Accessories.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Accessories</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Undergarments</a>
+                        <a class="dropdown-item" href="#">Tie</a>
+                        <a class="dropdown-item" href="#">Cufflinks</a>
+                        <a class="dropdown-item" href="#">Pocket Squares</a>
+                        <a class="dropdown-item" href="#">Belts</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="cart-container">
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <p><strong>Total Items: </strong><span id="total-items">0</span></p>
+            <p><strong>Total Price: </strong><span id="total-price">$0.00</span></p>
+        </div>
+
+        <button id="clear-cart" class="btn btn-danger">Clear Cart</button>
+        <!-- Order Form -->
+        <div class="order-form">
+            <h3>Complete Your Order</h3>
+            <form id="order-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required><br>
+
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" required></textarea><br>
+
+                <button type="submit">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4> Armour Official</h4>
+                <p>Welcome to Armour Official! We are menswear brand, designed entirely in-house, stand-alone
+                    Pakistan's No. 1 Shirt Brand. From timeless tailoring to premium formal shirts, we present a
+                    considered edit of quality, wearable clothes, and accessories bearing the name Armoured Offical.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="links">Our Links</h4>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./Product.html">Shop Now</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Our Office</h4>
+                <ul>
+                    <li><a href="#">📌 Bahria University Karachi Campus</a></li>
+                    <li><a href="#">📞 +012 345 67890</a></li>
+                    <li><a href="#">📩 bahria.edu.pk</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Cristiano/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Cristiano?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/cristiano/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/cristiano-ronaldo7?trk=ppro_cprof"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="copyright-area">
+        &copy; 2025 <strong>Armour Official</strong>. All rights reserved. | Designed by Team Dauntless
+    </div>
+    <!-- Copyright End -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const totalItems = parseInt(localStorage.getItem("cartCount")) || 0;
+            const totalPrice = totalItems * 500; // Assuming $500 per item
+
+            document.getElementById("total-items").innerText = totalItems;
+            document.getElementById("total-price").innerText = totalPrice;
+
+
+            const clearCartButton = document.getElementById("clear-cart");
+            clearCartButton.addEventListener("click", function () {
+                localStorage.setItem("cartCount", 0);
+                location.reload(); // Refresh page to reset display
+            });
+        });
+    </script>
+    <!-- My JS -->
+    <script src="My JS/cart.js"></script>
+    <script src="My JS/Script.js"></script>
+    <!-- bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

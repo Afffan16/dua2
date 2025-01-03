@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing Brand</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="My CSS/Style.css">
+    <!-- My Responsive CSS -->
+    <link rel="stylesheet" href="My CSS/Responsive.css">
+    <!-- bootstrap CSS Bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font-Awesome Bundle -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .jeans-section {
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .jeans-label {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            transform: translateY(-50%);
+            background-color: #ffffff;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+            width: 30vw;
+            text-align: center;
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        /* Label */
+
+        /* Product Tools Start */
+        .tools-carousel {
+            margin: 60px auto;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .tools-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .tools-item {
+            min-width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .thumb-wrapper-tools {
+            padding: 15px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+            width: 240px;
+            height: 270px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .thumb-wrapper-tools h4 {
+            color: #0d5a36;
+        }
+
+        .thumb-wrapper-tools:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-box-tools {
+            height: 120px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .img-box-tools img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-tools {
+            color: #0d5a36;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #0d5a36;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-tools:hover {
+            background-color: #237041;
+            border-color: #124129;
+            color: #fff;
+        }
+
+        .carousel-control-tools {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0d5a36;
+            border-radius: 4px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control-tools.left {
+            left: 10px;
+        }
+
+        .carousel-control-tools.right {
+            right: 10px;
+        }
+
+        /* Product Tools End */
+
+        /* Product Shorts Start */
+        .shorts-carousel {
+            margin: 60px auto;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .shorts-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .shorts-item {
+            min-width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .thumb-wrapper-shorts {
+            padding: 15px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+            width: 240px;
+            height: 270px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .thumb-wrapper-shorts h4 {
+            color: #0d5a36;
+        }
+
+        .thumb-wrapper-shorts:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-box-shorts {
+            height: 120px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .img-box-shorts img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-shorts {
+            color: #0d5a36;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #0d5a36;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-shorts:hover {
+            background-color: #237041;
+            border-color: #124129;
+            color: #fff;
+        }
+
+        .carousel-control-shorts {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0d5a36;
+            border-radius: 4px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control-shorts.left {
+            left: 10px;
+        }
+
+        .carousel-control-shorts.right {
+            right: 10px;
+        }
+
+        /* Product Shorts End */
+        /* Jeans Product Start */
+        .jeans-carousel {
+            margin: 60px auto;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .jeans-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .jeans-item {
+            min-width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .thumb-wrapper-jeans {
+            padding: 15px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+            width: 240px;
+            height: 270px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .thumb-wrapper-jeans h4 {
+            color: #0d5a36;
+        }
+
+        .thumb-wrapper-jeans:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-box-jeans {
+            height: 120px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .img-box-jeans img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-jeans {
+            color: #0d5a36;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #0d5a36;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-jeans:hover {
+            background-color: #237041;
+            border-color: #124129;
+            color: #fff;
+        }
+
+        .carousel-control-jeans {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0d5a36;
+            border-radius: 4px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control-jeans.left {
+            left: 10px;
+        }
+
+        .carousel-control-jeans.right {
+            right: 10px;
+        }
+
+        /* Jeans Product End */
+
+        /* Cotton Pants Product Start */
+        .cotton-pants-carousel {
+            margin: 60px auto;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .cotton-pants-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .cotton-pants-item {
+            min-width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .thumb-wrapper-cotton-pants {
+            padding: 15px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+            width: 240px;
+            height: 270px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .thumb-wrapper-cotton-pants h4 {
+            color: #0d5a36;
+        }
+
+        .thumb-wrapper-cotton-pants:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-box-cotton-pants {
+            height: 120px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .img-box-cotton-pants img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-cotton-pants {
+            color: #0d5a36;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #0d5a36;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-cotton-pants:hover {
+            background-color: #237041;
+            border-color: #124129;
+            color: #fff;
+        }
+
+        .carousel-control-cotton-pants {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0d5a36;
+            border-radius: 4px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control-cotton-pants.left {
+            left: 10px;
+        }
+
+        .carousel-control-cotton-pants.right {
+            right: 10px;
+        }
+
+        /* Cotton Pants Product End */
+        /* Cargo Pants Product Start */
+        .cargo-pants-carousel {
+            margin: 60px auto;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .cargo-pants-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .cargo-pants-item {
+            min-width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .thumb-wrapper-cargo-pants {
+            padding: 15px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+            width: 240px;
+            height: 270px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .thumb-wrapper-cargo-pants h4 {
+            color: #0d5a36;
+        }
+
+        .thumb-wrapper-cargo-pants:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .img-box-cargo-pants {
+            height: 120px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .img-box-cargo-pants img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-cargo-pants {
+            color: #0d5a36;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #0d5a36;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-cargo-pants:hover {
+            background-color: #237041;
+            border-color: #124129;
+            color: #fff;
+        }
+
+        .carousel-control-cargo-pants {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0d5a36;
+            border-radius: 4px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-control-cargo-pants.left {
+            left: 10px;
+        }
+
+        .carousel-control-cargo-pants.right {
+            right: 10px;
+        }
+
+        /* Cargo Pants Product End */
+
+
+        .clothes-carousel {
+            position: relative;
+        }
+
+        .clothes-carousel-fade .clothes-carousel-item {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .clothes-carousel-image {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .clothes-carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #fff;
+            /* background: rgba(0, 0, 0, 0.6); */
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #000;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-white border-bottom py-2">
+        <div class="container d-flex align-items-center flex-wrap">
+            <!-- Menu Icon -->
+            <button class="btn btn-outline-dark d-flex align-items-center me-auto" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <i class="fas fa-bars me-2"></i> MENU
+            </button>
+
+            <!-- Logo -->
+            <div class="text-center mx-auto">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/Armour Logo 3.jpg" alt="Logo" style="height: 40px;" class="me-2">
+                    <span class="fw-bold text-dark" style="font-size: 28px;">Armour Official</span>
+                </a>
+            </div>
+
+            <!-- Add to Cart Section -->
+            <a href="cart.html" class="btn btn-outline-dark position-relative ms-auto">
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+                <span
+                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle p-2 rounded-circle">0</span>
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="dropdown">
+                    <a href="winter wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Winter Wears</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="">Sweat Shirts</a>
+                        <a class="dropdown-item" href="">Sweaters</a>
+                        <a class="dropdown-item" href="">Mufflers</a>
+                        <a class="dropdown-item" href="">Hoodies</a>
+                        <a class="dropdown-item" href="">Jackets</a>
+                        <a class="dropdown-item" href="">Long Coats</a>
+                        <a class="dropdown-item" href="">Men's Shawls</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="shirts.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Shirts</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Casual Shirts</a>
+                        <a class="dropdown-item" href="#">Sandos</a>
+                        <a class="dropdown-item" href="#">T-Shirts</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="bottom wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Bottom Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Trousers</a>
+                        <a class="dropdown-item" href="#">Shorts</a>
+                        <a class="dropdown-item" href="#">Jeans</a>
+                        <a class="dropdown-item" href="#">Cotton Pants</a>
+                        <a class="dropdown-item" href="#">Cargo Pants</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="traditional wear.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Traditional Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Shalwar Kameez</a>
+                        <a class="dropdown-item" href="#">Kurta Panjama</a>
+                        <a class="dropdown-item" href="#">Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="formal.html" class="dropdown-toggle text-dark text-decoration-none d-block py-2">Formal
+                        Wear</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Formal Shirts</a>
+                        <a class="dropdown-item" href="#">Formal Pants</a>
+                        <a class="dropdown-item" href="#">Suitings & Blazers</a>
+                        <a class="dropdown-item" href="#">Safari Suits</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="ceremonial.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Ceremonial
+                        Collection</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Fancy Suits</a>
+                        <a class="dropdown-item" href="#">Shairwani</a>
+                        <a class="dropdown-item" href="#">Prince Coats</a>
+                        <a class="dropdown-item" href="#">Designer Waistcoats</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="Accessories.html"
+                        class="dropdown-toggle text-dark text-decoration-none d-block py-2">Accessories</a>
+                    <div class="dropdown-menu sidebar-style">
+                        <a class="dropdown-item" href="#">Undergarments</a>
+                        <a class="dropdown-item" href="#">Tie</a>
+                        <a class="dropdown-item" href="#">Cufflinks</a>
+                        <a class="dropdown-item" href="#">Pocket Squares</a>
+                        <a class="dropdown-item" href="#">Belts</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Clothes Carousel Start -->
+    <div id="clothesCarousel" class="clothes-carousel slide clothes-carousel-fade" data-bs-ride="carousel">
+        <div class="clothes-carousel-inner">
+            <div class="clothes-carousel-item active">
+                <img src="Images/bottomwear.jpg" class="clothes-carousel-image w-100" alt="Clothes Display">
+                <div class="clothes-carousel-caption">
+                    <h2>Shirts</h2>
+                    <p>Home | Shop Now</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Clothes Carousel End -->
+
+
+    <!-- Jeans Side Heading -->
+    <br>
+    <div class="jeans-section">
+        <div class="jeans-label">Casual Shirts</div>
+    </div>
+    <!-- Product Tools Section Start -->
+    <div class="container" id="tools">
+        <br>
+        <div class="tools-carousel">
+            <div class="tools-carousel-inner" id="toolsCarouselInner">
+                <!-- Slide 1 -->
+                <div class="tools-item">
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="./Images/trousers/1.jpg" alt="Casual Shirt 1">
+                        </div>
+                        <h4>Black Stylish Casual Shirt</h4>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/2.jpg" alt="Casual Shirt 2">
+                        </div>
+                        <h4>Blue Lined Casual Shirt</h4>
+                        <br>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/3.jpg" alt="Casual Shirt 3">
+                        </div>
+                        <h4>Winter Casual Shirt</h4>
+                        <br>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/4.jpg" alt="Casual Shirt 4">
+                        </div>
+                        <h4>White Plain Casual Shirt</h4>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="tools-item">
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/5.jpg" alt="Casual Shirt 5">
+                        </div>
+                        <h4>Checker Casual Shirt</h4>
+                        <br>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/6.jpg" alt="Casual Shirt 6">
+                        </div>
+                        <h4>Boxes Design Casual Shirt</h4>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/7.jpg" alt="Casual Shirt 7">
+                        </div>
+                        <h4>Fancy White Casual Shirt</h4>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/8.jpg" alt="Casual Shirt 8">
+                        </div>
+                        <h4>Cotton Casual Shirt</h4>
+                        <br>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="tools-item">
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/9.jpg" alt="Casual Shirt 9">
+                        </div>
+                        <h4>Black Pant Style Casual Shirt</h4>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/10.jpeg" alt="Casual Shirt 10">
+                        </div>
+                        <h4>Fancy Casual Shirt</h4>
+                        <br>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/11.jpg" alt="Casual Shirt 11">
+                        </div>
+                        <h4>Wooly Casual Shirt</h4>
+                        <br>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-tools">
+                        <div class="img-box-tools">
+                            <img src="Images/trousers/12.jpg" alt="Casual Shirt 12">
+                        </div>
+                        <h4>Grey Linen Casual Shirt</h4>
+                        <button class="btn-tools">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-control-tools left" onclick="moveSlideTools(-1)">&#10094;</div>
+            <div class="carousel-control-tools right" onclick="moveSlideTools(1)">&#10095;</div>
+        </div>
+    </div>
+    <!-- Product Tools Section End -->
+
+
+    <!-- Jeans Side Heading -->
+    <br>
+    <div class="jeans-section">
+        <div class="jeans-label">Sandos</div>
+    </div>
+    <!-- Sandos Product Section Start -->
+    <div class="container" id="shorts">
+        <br>
+        <div class="shorts-carousel">
+            <div class="shorts-carousel-inner">
+                <!-- Slide 1 -->
+                <div class="shorts-item">
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short1.png" alt="Short 1">
+                        </div>
+                        <h4>Beach Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short2.png" alt="Short 2">
+                        </div>
+                        <h4>Running Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short3.png" alt="Short 3">
+                        </div>
+                        <h4>Casual Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short4.png" alt="Short 4">
+                        </div>
+                        <h4>Denim Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="shorts-item">
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short1.png" alt="Short 1">
+                        </div>
+                        <h4>Beach Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short2.png" alt="Short 2">
+                        </div>
+                        <h4>Running Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short3.png" alt="Short 3">
+                        </div>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short4.png" alt="Short 4">
+                        </div>
+                        <h4>Denim Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="shorts-item">
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short1.png" alt="Short 1">
+                        </div>
+                        <h4>Beach Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short2.png" alt="Short 2">
+                        </div>
+                        <h4>Running Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short3.png" alt="Short 3">
+                        </div>
+                        <h4>Casual Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-shorts">
+                        <div class="img-box-shorts">
+                            <img src="Images/short4.png" alt="Short 4">
+                        </div>
+                        <h4>Denim Sando</h4>
+                        <button class="btn-shorts">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-control-shorts left" onclick="moveSlideShorts(-1)">&#10094;</div>
+            <div class="carousel-control-shorts right" onclick="moveSlideShorts(1)">&#10095;</div>
+        </div>
+    </div>
+    <!-- Sandos Product Section End -->
+
+    <!-- Jeans Side Heading -->
+    <br>
+    <div class="jeans-section">
+        <div class="jeans-label">T Shirts</div>
+    </div>
+    <!-- T Shirts Product Section Start -->
+    <div class="container" id="jeans">
+        <br>
+        <div class="jeans-carousel">
+            <div class="jeans-carousel-inner">
+                <!-- Slide 1 -->
+                <div class="jeans-item">
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans1.png" alt="Jeans 1">
+                        </div>
+                        <h4>Graphic T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans2.png" alt="Jeans 2">
+                        </div>
+                        <h4>Plain White T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans3.png" alt="Jeans 3">
+                        </div>
+                        <h4>Striped T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans4.png" alt="Jeans 4">
+                        </div>
+                        <h4>V-neck T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="jeans-item">
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans1.png" alt="Jeans 1">
+                        </div>
+                        <h4>Graphic T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans2.png" alt="Jeans 2">
+                        </div>
+                        <h4>Plain White T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans3.png" alt="Jeans 3">
+                        </div>
+                        <h4>Striped T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans4.png" alt="Jeans 4">
+                        </div>
+                        <h4>V-neck T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="jeans-item">
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans1.png" alt="Jeans 1">
+                        </div>
+                        <h4>Graphic T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans2.png" alt="Jeans 2">
+                        </div>
+                        <h4>Plain White T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans3.png" alt="Jeans 3">
+                        </div>
+                        <h4>Striped T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                    <div class="thumb-wrapper-jeans">
+                        <div class="img-box-jeans">
+                            <img src="Images/jeans4.png" alt="Jeans 4">
+                        </div>
+                        <h4>V-neck T-Shirt</h4>
+                        <button class="btn-jeans">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-control-jeans left" onclick="moveSlideJeans(-1)">&#10094;</div>
+            <div class="carousel-control-jeans right" onclick="moveSlideJeans(1)">&#10095;</div>
+        </div>
+    </div>
+    <!-- T Shirts Product Section End -->
+
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4> Armour Official</h4>
+                <p>Welcome to Armour Official! We are menswear brand, designed entirely in-house, stand-alone
+                    Pakistan's No. 1 Shirt Brand. From timeless tailoring to premium formal shirts, we present a
+                    considered edit of quality, wearable clothes, and accessories bearing the name Armoured Offical.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h4 class="links">Our Links</h4>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./Product.html">Shop Now</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Our Office</h4>
+                <ul>
+                    <li><a href="#">📌 Bahria University Karachi Campus</a></li>
+                    <li><a href="#">📞 +012 345 67890</a></li>
+                    <li><a href="#">📩 bahria.edu.pk</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Cristiano/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Cristiano?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/cristiano/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/cristiano-ronaldo7?trk=ppro_cprof"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="copyright-area">
+        &copy; 2025 <strong>Armour Official</strong>. All rights reserved. | Designed by Team Dauntless
+    </div>
+    <!-- Copyright End -->
+
+    <script>
+
+        let shortsIndex = 0;
+
+        function moveSlideShorts(step) {
+            const carouselInner = document.querySelector(".shorts-carousel-inner");
+            const totalItems = carouselInner.children.length;
+            shortsIndex = (shortsIndex + step + totalItems) % totalItems;
+            carouselInner.style.transform = "translateX(" + (-shortsIndex * 100) + "%)";
+        }
+
+
+        let toolsIndex = 0;
+
+        function moveSlideTools(step) {
+            const toolsCarouselInner = document.getElementById("toolsCarouselInner");
+            const totalItemsTools = toolsCarouselInner.children.length;
+            toolsIndex = (toolsIndex + step + totalItemsTools) % totalItemsTools;
+            toolsCarouselInner.style.transform = "translateX(" + (-toolsIndex * 100) + "%)";
+        }
+
+        let jeansIndex = 0;
+
+        function moveSlideJeans(step) {
+            const carouselInner = document.querySelector(".jeans-carousel-inner");
+            const totalItems = carouselInner.children.length;
+            jeansIndex = (jeansIndex + step + totalItems) % totalItems;
+            carouselInner.style.transform = "translateX(" + (-jeansIndex * 100) + "%)";
+        }
+
+
+
+    </script>
+
+    <!-- My JS -->
+    <script src="My JS/Script.js"></script>
+    <script src="My JS/cart.js"></script>
+    <!-- bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
